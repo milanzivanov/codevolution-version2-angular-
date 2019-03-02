@@ -1,0 +1,35 @@
+<h2>
+  Welcome {{ name }} To Angular World!!!
+</h2>
+<h2>{{ 2+2 }}</h2>
+<h2>{{ 'Welcome ' + name }}</h2>
+<h2>{{ name.length }}</h2>
+<h2>{{ name.toUppercase }}</h2>
+<h2>{{ greetUser() }}</h2>
+<h2>{{ siteUrl }}</h2>
+
+<!-- <h2>{{ window.location.href }}</h2> it is not possible!!! -->
+<!-- <h2>{{ a = 2 + 2 }}</h2>  it is not possible!!! -->
+
+<!-- property binding -->
+<input type="text" [id]="myId" value="Milan">
+<input type="text" id="{{myId}}" value="Milan">
+
+<input [disabled]="isDisabled" type="text" id="{{myId}}" value="Milan">
+
+
+<!-- class binding -->
+
+<h2 class="text-success">Class Binding</h2>
+<h2 [class]="successClass">Class Binding</h2>
+
+<h2 [class]="successClass" class="text-special">Class Binding</h2>
+<h2 [class.text-danger]="hasError">Class Binding</h2>
+<h2 [ngClass]="messageClasses">Class Binding</h2>
+
+<!-- style binding -->
+
+<h4 [style.color]="'yellow'">Style binding</h4>
+<h4 [style.color]="hasError ? 'red' : 'pink'">Style binding</h4>
+<h4 [style.color]="highlightColor">Style binding</h4>
+<h4 [ngStyle]="titleStyles">Style binding</h4>
